@@ -21,4 +21,38 @@ function doRequest(){
     var contractInstance = VotingContract.at(address);
     
     
+    //Se obtiene el total de candidatos y se itera para mostrar los candidatos
+    // y el total de vots
+    let totalCandidates = contractInstance.candidateListLength.call().toString();
+    let candidate;
+    let votes;
+
+    let textnode
+    for(let i = 0; i< totalCandidates; i++){
+        let tarjeta = document.createElement("div");
+        tarjeta.setAttribute('class',"card")
+
+        candidateField = document.createElement("div");
+        candidateField.setAttribute("class", "candidate");
+
+        voteField= document.createElement("div");
+        voteField.setAttribute("class", "votes");
+
+        //se llama a la funcion candidateList con el numero de candidato
+        candidate = contractInstance.candidateList.call(i)
+        //se llama a la función totalVotesFor para obtener el total de votos por candidato
+        votes = contractInstance.totalVotesFor(candidate).toNumber();
+
+        textnode = document.createTextNode(web3.toUtf8(candidate));
+        candidateField.appendChild(textnode);
+
+        textnode = document.createTextNode(votes);
+        voteField.appendChild(textnode);
+
+
+        tarjeta.appendChild(candidateField);
+        tarjeta.appendChild(voteField);
+        document.getElementById("lista").appendChild(tarjeta);
+        
+    }
 }
