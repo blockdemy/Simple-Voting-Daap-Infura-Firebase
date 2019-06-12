@@ -6,27 +6,37 @@
     <title>Dapp Voting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    
+    <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Voting Dapp</h1>
+    <div class="grid">
+        
+        <header class="grid-item heder">
+                <h1>Voting Dapp</h1>
 
-    <div id="head">
-        <div>
-            Candidato
-        </div>
-        <div>Votos Recibidos</div>
-    </div>
-    <div id="lista">
+                <div class="lineHeder"></div>
+                
+        </header>
+        
+
+        <main class="grid-item main">
+                <div id="mainhead">
+                        <div id="can">
+                           <h3>Candidato</h3>
+                        </div>
+                        <div id="votos"><h3>Votos Recibidos</h3></div>
+                </div>
+                
+                <div id="lista">
+                </div>
+        </main>
     </div>
 
-    <div id="votar">
-        <button id="metamask">click</button>
-    </div>
+
 
     <!-- CDN de web3js -->
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
     
-    <script src="main.js"></script>
+    <script src="index.1.js"></script>
 </body>
 </html>
