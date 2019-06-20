@@ -1,4 +1,3 @@
-console.log("Conectado")
 document.addEventListener('DOMContentLoaded', doRequest)
 
 function doRequest(){
