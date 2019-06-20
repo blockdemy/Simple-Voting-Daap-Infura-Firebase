@@ -31,7 +31,7 @@ Carpeta que contiene el index.html, styles.css y el main.js para la llamada del 
 
 En el archivo main.js, es necesario agregar tu projectID, el ABI del contrato y la dirección del contrato desplegado.
 
-* `projectID es otorgado por `INFURA` cuando se inicia un nuevo proyecto.
+* `projectID` es otorgado por `INFURA` cuando se inicia un nuevo proyecto.
 * `ABI` se obtiene de `Remix` despues de compilar el contrato
 * `address contract` es la dirección del contrato desplegado en la red de prueba elegida
 
